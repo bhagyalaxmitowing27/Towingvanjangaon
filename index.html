@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhagyalaxmi Towing Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #37ccbae2;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: rgb(15, 2, 2);
+      text-decoration: none;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .services,
+    .ratings {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      border: 1px solid #3393c7;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #90743b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .banner {
+      background: #23140d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    .cta {
+      background: #de5555;
+      color: #000;
+      padding: 5px 10px;
+      border: 1px solid whitesmoke;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* Rating styles */
+    .rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .rating input:checked~label {
+      color: gold;
+    }
+
+    .rating label:hover,
+    .rating label:hover~label {
+      color: gold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bhagyalaxmi Towing Service Jangaon 24/7</h1>
+    <a href="tel:+919542586680" class="cta">Call Now</a>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#ratings">Customer Ratings</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="banner">🚨 Available 24/7 for Emergency Towing 🚨</div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Bhagyalaxmi Towing Service provides reliable towing for accident, breakdown, and non-movable vehicles.
+      Our team is available round the clock to ensure your safety and convenience.</p>
+  </section>
+
+  <section id="ratings">
+    <h2>Rate Our Service</h2>
+    <form class="rating">
+      <input type="radio" name="star" id="star5" value="5">
+      <label for="star5">★</label>
+      <input type="radio" name="star" id="star4" value="4">
+      <label for="star4">★</label>
+      <input type="radio" name="star" id="star3" value="3">
+      <label for="star3">★</label>
+      <input type="radio" name="star" id="star2" value="2">
+      <label for="star2">★</label>
+      <input type="radio" name="star" id="star1" value="1">
+      <label for="star1">★</label>
+    </form>
+    <p id="output"></p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <img src="c:/Users/enugu/OneDrive/Desktop/tow 4.jpeg" alt="Accident Vehicle">
+        <h3>Accident Recovery</h3>
+        <p>Quick response for accident-damaged vehicles.</p>
+      </div>
+      <div class="card">
+        <img src="c:/Users/enugu/OneDrive/Desktop/tow 2.jpeg" alt="Breakdown Vehicle">
+        <h3>Breakdown Assistance</h3>
+        <p>Reliable towing for vehicles that are stopped unexpectedly.</p>
+      </div>
+      <div class="card">
+        <img src="c:/Users/enugu/OneDrive/Desktop/tow.JPG" alt="Non-movable Vehicle">
+        <h3>Non-Movable Vehicles</h3>
+        <p>Safe transport for vehicles that cannot move on their own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact us</h2>
+    <p>Email: <a href="mailto:bhagyalaxmitowing27@gmail.com">bhagyalaxmitowing27@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/919542586680" target="_blank" rel="noopener">Chat</a></p>
+    <p>Location: <a href="https://www.google.com/maps/search/?api=1&query=Jangaon%2C%20Telangana" target="_blank" rel="noopener">Jangaon, Telangana</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Bhagyalaxmi Towing Service | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const ratingInputs = document.querySelectorAll('.rating input');
+    const output = document.getElementById('output');
+
+    ratingInputs.forEach(input => {
+      input.addEventListener('change', () => {
+        output.textContent = `You rated: ${input.value} star(s)`;
+      });
+    });
+  </script>
+</body>
+</html>
